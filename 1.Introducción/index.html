@@ -1,0 +1,58 @@
+
+    
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Datos de usuario</title>
+        <style>
+            .container{
+                width: 50%;
+                margin: 0 auto;
+            }
+            .img{
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            label, input{
+                width: 100%;
+            }
+            label{
+                padding-bottom: 5px;
+            }
+            input{
+                margin-bottom: 15px;
+                line-height: 24px;
+            }
+
+            .update-button{
+                background-color:darkgoldenrod;
+                width: auto;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="img">
+                <img id="Avatar" src(unknown) alt="Avatar" />
+            </div>
+            <div class="data">
+                <label for="Name">Nombre</label>
+                <input type="text" id="Name" name="Name" value="">
+                <label for="LastName">Apellidos</label>
+                <input type="text" id="LastName" name="LastName" value="">
+            </div>
+            <div>
+                <input type="button" value="Update" class="update-button" onclick="console.log(document.getElementById('Name').value + ' ' + document.getElementById('LastName').value)">
+            </div>
+        </div>
+        <script>
+            document.getElementById("Avatar").src = "img/avatar.png";
+            document.getElementById("Name").value = "Xabier";
+            document.getElementById("LastName").value = "Mutiloa";
+        </script>
+    </body>
+</html>
