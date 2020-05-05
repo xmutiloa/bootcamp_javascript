@@ -1,105 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>SHOPPING CART</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
-    <body>
-        <div class="shopping-container">
-            <div class="shopping-header">
-                <h2>SHOPPING CART</h2>
-            </div>
-            <div class="shopping-body">
-                <div class="shopping-item">
-                    <div class="selection">
-                        <input id="item1" type="checkbox">
-                        <label for="item1"></label>
-                    </div>
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhIQERITEhAVFhUWFRUWEhYRFhIVFRUWFhURFRYYHSggGBolGxUWIjghJSktLi4uFx81ODMsNygtLisBCgoKDg0NGA8QGi0dHh8rLTcrKy0tKys3LS4tKysrLSsrKy0tKysrKystOCsrLSsrLS0tKyswKystLS0tLS4tLf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAAAgEDBAUHBv/EAEMQAAIBAgEIBQkECQQDAAAAAAABAgMRIQQFEjFBUXGRBiJhgdETFDJSVJShsfBiosHhB0JTcpKy0tPxFSOEkxYzRP/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAHREBAQEBAAMAAwAAAAAAAAAAAAERAgMSMSFBUf/aAAwDAQACEQMRAD8A7iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEK1VRTlJ2SApWrKKu+W18DGq5zpx0NN6Om7R42vjuNFLOkq1bRWEI4vgtS52LWcYTdSNRLThGLSjH0lJvF2fpK1uQ6/EZ6tk2PWxkninckeRzDWqrVGailJvSTWlLcr/AGmz01LKNSkrP4El2HHXtNZAAK0AAAAAAAAAAAAAAAAAAAAAAAAAAAAABbr1lCMpydoxTk3uSV2y4aHpxOXmdaEE3UqJU4pa5OT9Fd1wluRidHOmNPLJVYxi46DVk8W4u9n2PB4cD1KODfo/yvyWXaEsNOMob+tFqS+EZczueSTvFdmBObsY8fXtztXgAV0DU9IsnnKClC/Vu2uzf3G2MPOmVeTg3teC8QPK5BT0E2/Sni+xLUvnzM+Fayva7foreYEHpNt+itb/AARl0k/Set6lujsRoTl9rrSe1tqK+kQyXKYu7pVVZa9GWnFPtjLZfcyuUQ0o2tfWmr2vFqzSex4mrzHmXyLm1Oc9Ky60PJqMU+L0njrQHp6GWzh6avH1o4x71rj8jZ0qykro0tOpoou5DnGGMbpvSknbVdSaa7ngTBuQYFOu1itXP4GXSrJkFwAAAAAAAAAAAAAAAAAAAAAAAAAADxv6Rs7SowhTpY1pqbitsUlZz1YWTeN13nsji/T3pCquU1Y0o6l5HS1uSi8UltV9LmTq5HPy9Zy8bQqTo1YzXVqU53s9kovGL5Wfed46M57hXoxq03dNdaO2LWtPtRw+rklZdepSqq+LcoSxbeLbM/Mudp0JadGei9q1xkvtR+mc+es+vN4/J6XL8d/jXi9qK+VjvXM5rkXTmEl/vUpRltlSkmn26LMyfS/JbX8rW/62vi0dNn9eqeTm/t7ueVQWuRoM8VfKtaOEVrb1Jb/yMbJarqRUo0qlnjerJRVnqdl8i7OKXptStqilaC7tveabWqcFZO1oL0Vtm/WfZ9atctPaQrVm8dZGP148SjJg769X18C5dbMDHRHyy0tC/XtpW+ze1+YGTrTWtPDB4mFRzfHyvlVfSvpO03GLk7deULXvhe17XL2TUowWjCMYRvKVopRV5ScpSstrbb4syU76/wDHADLpStgQjnSEZqDa0nFPts27cdRbj2Pn4/5MPKc3QnOM5RTcb6LblHR2tKUWrxv+rLtA36rK94t27MVyL8ay3muo4Lt7FZdyIzzhGEkp2610l+67PjrRMG3TvqKmjqQqp6VGalH1ZX5KRk5vy+cpaE6coySvvi7bpLiMGzBRSuVIAAAAAAAAAAAAAAAAAAAjO9nbXbDicvzL0aVKcqtVqdVt3eyOLuo+P0+pHkN/70v5mJGbzLdWHSjutwwNTnHo/Qq4ypxv6y6kuOlHX33NyyLRqzSyX68ZlPQ79nWnHslFTXNNGRmfopoTU6tTTs01HR0Y9+PW+HeepsLGfSMTxcbuMnzh2stRjqo5Y6u+723T/LcUsUTxtvxX4/hzNuqa+u3i9pNMtlbgXKtbRV1GU3eKtHRvjJJy6zSsr3eOpPXqL9zCyecrddRUrvCMnJWu9F3aWNrbNe8vKZBkIkmWFMpNt6OjK1nd4J6SxTjjqx3Y4AXY2qYTp+hNOOmou7g041Y2btjqeDwM2EzEjIuRkBlwtw4eBYyzN6qWuk8b4p2vq0lZqUXbC6fcW61VxjKUYuckm1CLinJ7k5NK/Fl2lFRcpJJSlbSfrWVlfuAy8nVkldbMErWVrJWePMs5ZnGVPVFy3pK7S2SssbPf2E/KX1kKkE9l7ar424PWuYFK9OVVxrU5Sp1VFWWNmndpTju1m0yOs5xTktGWqS12fZ2GroZVFYaNvjfVj269l+Jl06yvdPXz/wAfW0mDYAseUe8ab3jBfBY8oySrbyC6AAAAAAAAAAAAAHkpqzkt0pfM9a2eWrwblOStaUm1jvLBisjcuyoS9X5Mg6UvVl/CzSIgOL3PkyOkFSIz37uP4aytylwKpkNGWlfS6ujbRt+tf0tLhhYpCaxV9XH5ktNbwJgjpC4CdazirSek2rpXUbJu8ns1W4laFOMFaEVFXlK0UorSk3KUrLa22772Li4F+MytbKo04yqTkoQinKUm7KKSu23uLKZcjIgv011nLSk01FaOGirX6ywvd3xx2IyIsxIyL0ZgZMWXImPGZLTAyEsex99/rlihUgkrrDa929trV234mPKph9f45k418PrvAzKNW6J6Zqqdezt222/jw+JkeVb1YgZjqFqdYsaMtuHEi7LW78ANnkVW6sZJpsnynFW1G5M0AAAAAAAAAABCq+q+D+R46pfY/h4Hrstdqc7erL5HkZzTLBadSf1J+BTzifbzJMpYoqsqn9rmvEr53PdL7viWnbs5/LeLrs5rs5AXfO57pfd8Snnctz+HiW7rs5rd8SuGvZxuBPzyXbyHnb2p/wALZBJFdECXnK2pfwPwKPKIbVH+UpojRAnGtD1V3SfiTU4bmuD8Sw4EHRW5cgMz/b3yXFXLiVP13/Ca50uP8TX4kvJvfLmBsUqf7T7v5lyKh+0+7+Zq40nvlz/IrGi/Wk+XgBtU4ftPu/mS8pT9d8jVKg9elLhdeBXzfVjLDttztrA2UqlPfL4EY1qa9aXFr8DAdFbb82S0F9YgZiymF9KMI336++7KvLpPeu63K5hxaWrAq6qAvurJ63wxvzKxfbfvMHz2F7aUeaNlkdOk8Z1Vwjf5tAZGQx0pJJYLXuSN+YmT1qUVaDSXB/EyIVovU0QTABAAAAAAAAAPK9I815Q25ZNRpy2/+xwb4p9XkeqAHJ69XOtN9bNVSa3069KfwuYlTpHlUPTzTnJfu5O6i5pnYwXRxZ9M5L0s35yhxyWS/EiunMfZcu92l4nawNHF100j7Ll3usy5HpfuyXLvdKvgdkA0ccXSyWzIs4e51fAl/wCUT9hzi/8Ah1fA7CBo4+uktT2HOPuVXwKrpJU9hzj7lW8Dr4Gjka6RVPYs4+41/wCkkukE/Y84e41/6DrQGjk8c/z9ky/3DKP6Caz7L2XL/cMp/tnVQNHLFn1+y5f7hlX9sr/rsvZcv9wyr+2dSA0cwjnqb/8Aky/3HKV84Ev9TrP0chy6X/GnH+ax00DRzHzvL36Ga8rf70snp/OqR8hnqfoZvpU1vq5XBtcVTv8AM6gBo5a+jOfanpVsjoL7Dk38YSJ0/wBG2WTxr5cpd05ruTaR08DV14bI/wBHUY+llM5cIKPzbN3knRWjT/WqS4yX4I3wJqMSlm6nHUubZkQpRWpJdxMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q==" alt="Zapatilla stan smith">
-                    <div class="item-entry">
-                        <span class="item-name">Zapatilla stan smith</span>
-                        <span class="item-description">comodas zapatillas de cuero que no pasan de moda. no lo dudes y adquiere ya este item</span>
-                    </div>
-                    <div class="quantity-item">
-                        <button class="quantity">+</button>
-                        <span class="quantity-ammount">2</span>
-                        <button class="quantity">-</button>
-                    </div>
-                    <div class="value">
-                        <span>&#36;</span>
-                        <span>300</span>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hoteles</title>
+</head>
+<body>
+    <div class="hotels-container">
+        <div class="hotels-header">
+            <h2>Listado de Hoteles</h2>
+        </div>
+        <div class="hotels-body">
+            <div class="hotel-item">
+                <!-- diff -->
+                <div class="hotel-name-container">
+                    <span class="hotel-name">Hotel Balmoral</span>
                 </div>
-                <div class="shopping-item">
-                    <div class="selection">
-                        <input id="item1" type="checkbox">
-                        <label for="item1"></label>
-                    </div>
-                    <img src="data:image/jpeg;base64,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" alt="Zapatilla predator futsal">
-                    <div class="item-entry">
-                        <span class="item-name">Zapatilla predator futsal</span>
-                        <span class="item-description">las predator clásicas que te permitirán lucir dentro del campo de fútbol sala</span>
-                    </div>
-                    <div class="quantity-item">
-                        <button class="quantity">+</button>
-                        <span class="quantity-ammount">1</span>
-                        <button class="quantity">-</button>
-                    </div>
-                    <div class="value">
-                        <span>&#36;</span>
-                        <span>50</span>
-                    </div>
+                <div class="hotel-description-container">
+                    <span class="hotel-description">Maravilloso hotel en Benalmadena, muy cerca del paseo marítimo y de los chiringuitos</span>
                 </div>
-                <div class="shopping-item">
-                    <div class="selection">
-                        <input id="item1" type="checkbox">
-                        <label for="item1"></label>
-                    </div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8Y-pL0FqFci8jaFMrfVYzV4x7MiWz-Vhf0sHLi_suFx_WnN6t&usqp=CAU" alt="Zapatilla predator training">
-                    <div class="item-entry">
-                        <span class="item-name">Zapatilla predator training</span>
-                        <span class="item-description">zapatilla indicada para el cross fit</span>
-                    </div>
-                    <div class="quantity-item">
-                        <button class="quantity">+</button>
-                        <span class="quantity-ammount">2</span>
-                        <button class="quantity">-</button>
-                    </div>
-                    <div class="value">
-                        <span>&#36;</span>
-                        <span>300</span>
-                    </div>
+                <div class="hotel-telephone-container">
+                    <span class="hotel-telephone">+34-555-555-555</span>
                 </div>
-                <div class="shopping-item">
-                    <div class="selection">
-                        <input id="item1" type="checkbox">
-                        <label for="item1"></label>
-                    </div>
-                    <img src="data:image/jpeg;base64,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" alt="Zapatilla predator pink">
-                    <div class="item-entry">
-                        <span class="item-name">Zapatilla predator pink</span>
-                        <span class="item-description">zapatilla ideal para realizar danza</span>
-                    </div>
-                    <div class="quantity-item">
-                        <button class="quantity">+</button>
-                        <span class="quantity-ammount">2</span>
-                        <button class="quantity">-</button>
-                    </div>
-                    <div class="value">
-                        <span>&#36;</span>
-                        <span>300</span>
-                    </div>
+                <!-- diff -->
+                <div class="stars">
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
                 </div>
-            </div>
-            <!-- diff -->
-            <div class="shopping-footer">
-                <h2>TOTAL</h2>
-                <span>&#36;</span>
-                <span>950</span>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
