@@ -48,17 +48,19 @@ let calculateTotalCost = (roomType, occupancyType, spaValue, numberNights, total
     document.getElementById("totalCost").value = "";  
   }
 
-  let roomPrice = roomType == undefined ? 100 : roomType;
+  roomType = roomType == undefined ? 100 : roomType;
   occupancyType = occupancyType == undefined ? "double" : occupancyType;
 
+  let totalCost = roomType + spaValue;
+
   switch(occupancyType){
-    case "single":  roomPrice = roomPrice - roomPrice * 0.25;
+    case "single":  totalCost = totalCost - totalCost * 0.25;
                     break;
-    case "triple":  roomPrice = roomPrice + roomPrice * 0.25;
+    case "triple":  totalCost = totalCost + totalCost * 0.25;
                     break;
   }
 
-  let totalCost = (roomPrice * numberNights) + spaValue + totalParkingNights;
+  totalCost = totalCost * numberNights + totalParkingNights;
 
   document.getElementById("totalCost").value = totalCost;
 }
