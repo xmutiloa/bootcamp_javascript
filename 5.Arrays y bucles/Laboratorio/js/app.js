@@ -72,7 +72,6 @@ let handleTotalPriceClick = event => {
 }
 
 let handlePremiumProductsClick = event => {
-
   let premiumList = [];
 
   for(i=0;i<carrito.length;i++){
@@ -86,6 +85,3 @@ let handlePremiumProductsClick = event => {
 document.getElementById("btnDeleteProduct").addEventListener("click", handleDeleteProductClick);
 document.getElementById("btnTotalPrice").addEventListener("click", handleTotalPriceClick);
 document.getElementById("btnPremiumProducts").addEventListener("click", handlePremiumProductsClick);
-
-
-
